@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THD Media Team - THPT Trần Hưng Đạo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="club-detail-page">
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+        <div class="logo">THD MEDIA TEAM</div>
+        <div style="width: 80px;"></div> 
+    </nav>
+
+    <header class="club-hero media-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <span class="club-tag media-tag">Truyền thông & Báo chí</span>
+            <h1>THD MEDIA TEAM</h1>
+            <p>Ghi lại những khoảnh khắc - Viết nên những câu chuyện</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="club-grid">
+            <div class="club-info">
+                <h2>Chúng mình là ai?</h2>
+                <p>THD Media Team là đội ngũ đứng sau những thước phim, bộ ảnh và bài viết trên Fanpage chính thức của trường. Chúng mình không chỉ săn tìm những khoảnh khắc đẹp mà còn là nơi để các bạn trẻ rèn luyện kỹ năng sử dụng máy ảnh, thiết kế đồ họa và quản lý mạng xã hội.</p>
+                
+                <div class="highlights">
+                    <div class="h-item">
+                        <i class="fas fa-camera" style="color: #ffa502;"></i>
+                        <span>Nhiếp ảnh & Quay phim</span>
+                    </div>
+                    <div class="h-item">
+                        <i class="fas fa-pen-nib" style="color: #ff4757;"></i>
+                        <span>Content & Biên tập</span>
+                    </div>
+                    <div class="h-item">
+                        <i class="fas fa-palette" style="color: #2ed573;"></i>
+                        <span>Design & Đồ họa</span>
+                    </div>
+                </div>
+
+                <h3>Mảng hoạt động chính</h3>
+                <div class="media-services">
+                    <div class="service-tag">Chụp ảnh sự kiện</div>
+                    <div class="service-tag">Sản xuất Video Tik Tok</div>
+                    <div class="service-tag">Thiết kế Poster/Banner</div>
+                    <div class="service-tag">Quản lý Fanpage</div>
+                </div>
+
+                <h3>Lịch họp Team</h3>
+                <table class="schedule-table media-table">
+                    <tr>
+                        <th>Nội dung</th>
+                        <th>Thời gian</th>
+                        <th>Địa điểm</th>
+                    </tr>
+                    <tr>
+                        <td>Họp chuyên môn (Kỹ thuật)</td>
+                        <td>Chiều Thứ 2 (16:45)</td>
+                        <td>Phòng Multimedia</td>
+                    </tr>
+                    <tr>
+                        <td>Duyệt Content tuần mới</td>
+                        <td>Chiều Thứ 7 (15:00)</td>
+                        <td>Căn tin / Sân trường</td>
+                    </tr>
+                </table>
+            </div>
+
+            <aside class="club-registration">
+                <div class="reg-card media-card">
+                    <h3>Gia nhập Media Team</h3>
+                    <p>Cùng chúng mình lưu giữ thanh xuân tại THPT Trần Hưng Đạo nhé!</p>
+                    <form id="regFormMedia">
+                        <input type="text" placeholder="Họ và tên" required>
+                        <input type="text" placeholder="Lớp" required>
+                        <select required>
+                            <option value="">Vị trí ứng tuyển?</option>
+                            <option value="Photo">Photographer (Chụp ảnh)</option>
+                            <option value="Video">Video Editor (Dựng phim)</option>
+                            <option value="Content">Content Creator (Viết bài)</option>
+                            <option value="Design">Designer (Thiết kế)</option>
+                        </select>
+                        <input type="text" placeholder="Link sản phẩm/Portfolio (nếu có)">
+                        <button type="submit" class="btn-submit media-btn">Gửi Portfolio ngay</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-bottom">
+            &copy; 2026 THD Media Team - THPT Trần Hưng Đạo.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('regFormMedia').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Wow! Media Team đã nhận được tín hiệu từ bạn. Hãy check tin nhắn sớm nhé!');
+        }
+    </script>
+</body>
+</html>

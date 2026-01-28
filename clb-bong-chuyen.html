@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLB Bóng Chuyền - THPT Trần Hưng Đạo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="club-detail-page">
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+        <div class="logo">VOLLEYBALL CLUB</div>
+        <div style="width: 80px;"></div> 
+    </nav>
+
+    <header class="club-hero volleyball-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <span class="club-tag vball-tag">Thể Thao</span>
+            <h1>CLB BÓNG CHUYỀN</h1>
+            <p>Vươn cao tầm vóc - Gắn kết đồng đội qua từng pha bóng</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="club-grid">
+            <div class="club-info">
+                <h2>Tinh thần của đội</h2>
+                <p>CLB Bóng chuyền THPT Trần Hưng Đạo là nơi dành cho những bạn yêu thích sự dẻo dai và tính chiến thuật. Không chỉ tập luyện kỹ thuật cá nhân như phát bóng, đập bóng hay chắn bóng, chúng mình còn chú trọng vào khả năng phối hợp ăn ý để tạo nên những "cú dứt điểm" ngoạn mục.</p>
+                
+                <div class="highlights">
+                    <div class="h-item">
+                        <i class="fas fa-hands" style="color: #0984e3;"></i>
+                        <span>Kỹ thuật chuyên sâu</span>
+                    </div>
+                    <div class="h-item">
+                        <i class="fas fa-users-cog" style="color: #00d2d3;"></i>
+                        <span>Chiến thuật đồng đội</span>
+                    </div>
+                </div>
+
+                <h3>Thông tin tập luyện</h3>
+                <table class="schedule-table vball-table">
+                    <tr>
+                        <th>Nội dung</th>
+                        <th>Thời gian</th>
+                        <th>Địa điểm</th>
+                    </tr>
+                    <tr>
+                        <td>Tập cơ bản & Thể lực</td>
+                        <td>Chiều Thứ 2 (16:30)</td>
+                        <td>Sân bóng chuyền ngoài trời</td>
+                    </tr>
+                    <tr>
+                        <td>Giao lưu & Thi đấu nội bộ</td>
+                        <td>Chiều Thứ 5 (16:30)</td>
+                        <td>Sân bóng chuyền ngoài trời</td>
+                    </tr>
+                </table>
+            </div>
+
+            <aside class="club-registration">
+                <div class="reg-card vball-card">
+                    <h3>Gia nhập Đội Tuyển</h3>
+                    <p>Hãy cùng chúng mình chinh phục những đỉnh cao mới!</p>
+                    <form id="regFormVball">
+                        <input type="text" placeholder="Họ và tên" required>
+                        <input type="text" placeholder="Lớp" required>
+                        <input type="number" placeholder="Chiều cao (cm)" required>
+                        <select required>
+                            <option value="">Vị trí mong muốn?</option>
+                            <option value="Chủ công">Chủ công (Outside Hitter)</option>
+                            <option value="Chuyền hai">Chuyền hai (Setter)</option>
+                            <option value="Phụ công">Phụ công (Middle Blocker)</option>
+                            <option value="Libero">Libero (Phòng thủ)</option>
+                        </select>
+                        <button type="submit" class="btn-submit vball-btn">Đăng ký ngay</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-bottom">
+            &copy; 2026 Volleyball Club - THPT Trần Hưng Đạo.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('regFormVball').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Thông tin của bạn đã được gửi đi. Hẹn gặp bạn tại buổi thử sân tới nhé!');
+        }
+    </script>
+</body>
+</html>

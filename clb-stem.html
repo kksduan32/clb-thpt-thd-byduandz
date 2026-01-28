@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLB STEM - THPT Trần Hưng Đạo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="club-detail-page">
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+        <div class="logo">STEM & ROBOTICS</div>
+        <div style="width: 80px;"></div> 
+    </nav>
+
+    <header class="club-hero stem-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <span class="club-tag stem-tag">Khoa học & Công nghệ</span>
+            <h1>CLB STEM & SÁNG TẠO</h1>
+            <p>Khám phá tri thức - Kiến tạo tương lai bằng trí tuệ và công nghệ</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="club-grid">
+            <div class="club-info">
+                <h2>Về chúng mình</h2>
+                <p>CLB STEM THPT Trần Hưng Đạo là sân chơi dành cho các bạn yêu thích các môn khoa học, kỹ thuật và toán học. Tại đây, chúng mình tập trung vào việc thực hành, chế tạo Robot, giải quyết các vấn đề thực tiễn thông qua các mô hình sáng tạo và lập trình ứng dụng.</p>
+                
+                <div class="highlights">
+                    <div class="h-item">
+                        <i class="fas fa-robot" style="color: #5352ed;"></i>
+                        <span>Robotics & Lập trình</span>
+                    </div>
+                    <div class="h-item">
+                        <i class="fas fa-flask" style="color: #2ed573;"></i>
+                        <span>Thí nghiệm Khoa học</span>
+                    </div>
+                    <div class="h-item">
+                        <i class="fas fa-microchip" style="color: #00e5ff;"></i>
+                        <span>Thiết kế & Sáng chế</span>
+                    </div>
+                </div>
+
+                <h3>Dự án tiêu biểu</h3>
+                <div class="project-list">
+                    <div class="project-item">
+                        <strong>Hệ thống tưới cây tự động:</strong> Sử dụng cảm biến độ ẩm và mạch Arduino để quản lý vườn trường.
+                    </div>
+                    <div class="project-item">
+                        <strong>Robot dò đường:</strong> Sản phẩm tham gia cuộc thi Robotics cấp tỉnh 2024.
+                    </div>
+                </div>
+
+                <h3>Lịch sinh hoạt</h3>
+                <table class="schedule-table stem-table">
+                    <tr>
+                        <th>Nội dung</th>
+                        <th>Thời gian</th>
+                        <th>Địa điểm</th>
+                    </tr>
+                    <tr>
+                        <td>Thực hành Robotics</td>
+                        <td>Chiều Thứ 5 (16:30)</td>
+                        <td>Phòng Lab Công nghệ</td>
+                    </tr>
+                    <tr>
+                        <td>Học thuật & Ý tưởng</td>
+                        <td>Sáng Chủ Nhật (08:30)</td>
+                        <td>Thư viện trường</td>
+                    </tr>
+                </table>
+            </div>
+
+            <aside class="club-registration">
+                <div class="reg-card stem-card">
+                    <h3>Gia nhập Lab STEM</h3>
+                    <p>Hãy trở thành một kỹ sư tương lai của THPT Trần Hưng Đạo ngay hôm nay!</p>
+                    <form id="regFormStem">
+                        <input type="text" placeholder="Họ và tên" required>
+                        <input type="text" placeholder="Lớp" required>
+                        <select required>
+                            <option value="">Lĩnh vực bạn quan tâm?</option>
+                            <option value="Robot">Lập trình & Robotics</option>
+                            <option value="Chemistry">Hóa học & Sinh học</option>
+                            <option value="Physics">Vật lý & Cơ khí</option>
+                            <option value="Math">Toán học ứng dụng</option>
+                        </select>
+                        <button type="submit" class="btn-submit stem-btn">Gửi thông tin đăng ký</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-bottom">
+            &copy; 2026 STEM Club - THPT Trần Hưng Đạo.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('regFormStem').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Chào mừng bạn đến với kỷ nguyên công nghệ! Đơn đăng ký đã được gửi đi.');
+        }
+    </script>
+</body>
+</html>
