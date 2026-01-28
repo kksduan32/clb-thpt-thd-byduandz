@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLB Bóng Đá - THPT Trần Hưng Đạo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="club-detail-page">
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+        <div class="logo">FOOTBALL CLUB</div>
+        <div style="width: 80px;"></div> </nav>
+
+    <header class="club-hero football">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <span class="club-tag">Thể thao</span>
+            <h1>ĐỘI BÓNG ĐÁ NAM</h1>
+            <p>Đam mê trên sân cỏ - Bản lĩnh của những nhà vô địch</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="club-grid">
+            <div class="club-info">
+                <h2>Giới thiệu chung</h2>
+                <p>CLB Bóng đá THPT Trần Hưng Đạo là nơi hội tụ của những học sinh có niềm đam mê mãnh liệt với quả bóng tròn. Không chỉ là nơi rèn luyện sức khỏe, đây còn là gia đình để các thành viên cùng nhau học hỏi tinh thần đồng đội và bản lĩnh thi đấu.</p>
+                
+                <div class="highlights">
+                    <div class="h-item">
+                        <i class="fas fa-trophy"></i>
+                        <span>Vô địch giải cụm 2024</span>
+                    </div>
+                    <div class="h-item">
+                        <i class="fas fa-users"></i>
+                        <span>30 Thành viên chính thức</span>
+                    </div>
+                </div>
+
+                <h3>Lịch tập luyện</h3>
+                <table class="schedule-table">
+                    <tr>
+                        <th>Thứ</th>
+                        <th>Thời gian</th>
+                        <th>Địa điểm</th>
+                    </tr>
+                    <tr>
+                        <td>Thứ 3</td>
+                        <td>16:30 - 18:00</td>
+                        <td>Sân bóng cỏ nhân tạo</td>
+                    </tr>
+                    <tr>
+                        <td>Thứ 7</td>
+                        <td>15:00 - 17:30</td>
+                        <td>Sân bóng cỏ nhân tạo</td>
+                    </tr>
+                </table>
+            </div>
+
+            <aside class="club-registration">
+                <div class="reg-card">
+                    <h3>Đăng ký thử chân</h3>
+                    <p>Hãy để lại thông tin, đội trưởng sẽ liên hệ với bạn!</p>
+                    <form id="regForm">
+                        <input type="text" placeholder="Họ và tên" required>
+                        <input type="text" placeholder="Lớp (Ví dụ: 10A1)" required>
+                        <input type="tel" placeholder="Số điện thoại / Zalo" required>
+                        <select>
+                            <option value="">Vị trí sở trường</option>
+                            <option value="GK">Thủ môn</option>
+                            <option value="DF">Hậu vệ</option>
+                            <option value="MF">Tiền vệ</option>
+                            <option value="FW">Tiền đạo</option>
+                        </select>
+                        <button type="submit" class="btn-submit">Gửi thông tin</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-bottom">
+            &copy; 2026 CLB Bóng Đá THPT Trần Hưng Đạo.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('regForm').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Cảm ơn bạn đã đăng ký! Chúng mình sẽ liên hệ sớm nhất.');
+        }
+    </script>
+</body>
+</html>

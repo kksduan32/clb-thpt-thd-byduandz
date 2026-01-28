@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLB Điền Kinh - THPT Trần Hưng Đạo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="club-detail-page">
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+        <div class="logo">ATHLETICS CLUB</div>
+        <div style="width: 80px;"></div> 
+    </nav>
+
+    <header class="club-hero track-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <span class="club-tag track-tag">Thể Thao</span>
+            <h1>CLB ĐIỀN KINH</h1>
+            <p>Bứt phá giới hạn - Chinh phục mọi cung đường</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="club-grid">
+            <div class="club-info">
+                <h2>Về đường chạy THĐ</h2>
+                <p>CLB Điền kinh là nơi hội tụ của những "vận động viên" không ngại nắng gió, luôn nỗ lực vượt qua chính mình. Chúng mình tập trung rèn luyện các nội dung chạy cự ly ngắn, cự ly dài và các môn bổ trợ nhằm xây dựng một nền tảng thể lực bền bỉ và ý chí kiên cường.</p>
+                
+                <div class="highlights">
+                    <div class="h-item">
+                        <i class="fas fa-stopwatch" style="color: #ff4757;"></i>
+                        <span>Tốc độ tối đa</span>
+                    </div>
+                    <div class="h-item">
+                        <i class="fas fa-heartbeat" style="color: #eb4d4b;"></i>
+                        <span>Sức bền dẻo dai</span>
+                    </div>
+                </div>
+
+                <h3>Các nội dung luyện tập</h3>
+                <div class="track-types">
+                    <div class="type-item">Chạy ngắn (100m, 200m)</div>
+                    <div class="type-item">Chạy bền (1500m, 3000m)</div>
+                    <div class="type-item">Nhảy xa / Nhảy cao</div>
+                </div>
+
+                <h3>Lịch tập luyện</h3>
+                <table class="schedule-table track-table">
+                    <tr>
+                        <th>Nội dung</th>
+                        <th>Thời gian</th>
+                        <th>Địa điểm</th>
+                    </tr>
+                    <tr>
+                        <td>Tập kỹ thuật & Tốc độ</td>
+                        <td>Sáng Thứ 4 (05:30)</td>
+                        <td>Sân vận động / Đường chạy</td>
+                    </tr>
+                    <tr>
+                        <td>Rèn luyện Sức bền</td>
+                        <td>Chiều Thứ 7 (16:30)</td>
+                        <td>Khuôn viên trường</td>
+                    </tr>
+                </table>
+            </div>
+
+            <aside class="club-registration">
+                <div class="reg-card track-card">
+                    <h3>Ghi danh ứng tuyển</h3>
+                    <p>Sẵn sàng bứt tốc cùng đội tuyển điền kinh THĐ!</p>
+                    <form id="regFormTrack">
+                        <input type="text" placeholder="Họ và tên" required>
+                        <input type="text" placeholder="Lớp" required>
+                        <select required>
+                            <option value="">Thế mạnh của bạn?</option>
+                            <option value="Short">Chạy cự ly ngắn</option>
+                            <option value="Long">Chạy cự ly dài</option>
+                            <option value="Jump">Nhảy xa/Nhảy cao</option>
+                            <option value="Other">Khác (Cần tư vấn)</option>
+                        </select>
+                        <button type="submit" class="btn-submit track-btn">Gửi đơn đăng ký</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-bottom">
+            &copy; 2026 Athletics Club - THPT Trần Hưng Đạo.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('regFormTrack').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Thông tin đã được ghi nhận! Đội trưởng sẽ liên hệ với bạn để kiểm tra thể lực nhé.');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLB Văn Nghệ - THPT Trần Hưng Đạo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="club-detail-page">
+
+    <nav class="navbar scrolled">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Quay lại</a>
+        <div class="logo">AMC ART CLUB</div>
+        <div style="width: 80px;"></div> 
+    </nav>
+
+    <header class="club-hero art-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <span class="club-tag art-tag">Nghệ thuật</span>
+            <h1>CLB VĂN NGHỆ (AMC)</h1>
+            <p>Nơi những vì sao tỏa sáng - Đánh thức tài năng nghệ thuật trong bạn</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="club-grid">
+            <div class="club-info">
+                <h2>Về chúng mình</h2>
+                <p>AMC là ngôi nhà chung dành cho những tâm hồn yêu âm nhạc, vũ đạo và diễn xuất. Tại đây, chúng mình không chỉ cùng nhau luyện tập mà còn là đội ngũ nòng cốt dàn dựng các tiết mục văn nghệ đặc sắc cho mọi sự kiện của trường THPT Trần Hưng Đạo.</p>
+                
+                <div class="highlights">
+                    <div class="h-item">
+                        <i class="fas fa-microphone-alt" style="color: #f368e0;"></i>
+                        <span>Đội hát & Nhạc cụ</span>
+                    </div>
+                    <div class="h-item">
+                        <i class="fas fa-bolt" style="color: #ff9f43;"></i>
+                        <span>Nhảy hiện đại & Múa</span>
+                    </div>
+                    <div class="h-item">
+                        <i class="fas fa-theater-masks" style="color: #5f27cd;"></i>
+                        <span>Kịch & MC</span>
+                    </div>
+                </div>
+
+                <h3>Lịch sinh hoạt định kỳ</h3>
+                <table class="schedule-table art-table">
+                    <tr>
+                        <th>Hoạt động</th>
+                        <th>Thời gian</th>
+                        <th>Địa điểm</th>
+                    </tr>
+                    <tr>
+                        <td>Luyện tập đội cốt cán</td>
+                        <td>Chiều Thứ 4 (16:45)</td>
+                        <td>Phòng truyền thống</td>
+                    </tr>
+                    <tr>
+                        <td>Sinh hoạt toàn CLB</td>
+                        <td>Chiều Thứ 6 (16:30)</td>
+                        <td>Nhà đa năng / Sân khấu</td>
+                    </tr>
+                </table>
+            </div>
+
+            <aside class="club-registration">
+                <div class="reg-card art-card">
+                    <h3>Gia nhập AMC</h3>
+                    <p>Đừng ngần ngại, hãy để AMC giúp bạn tỏa sáng trên sân khấu!</p>
+                    <form id="regFormArt">
+                        <input type="text" placeholder="Họ và tên" required>
+                        <input type="text" placeholder="Lớp" required>
+                        <select required>
+                            <option value="">Bạn muốn tham gia mảng nào?</option>
+                            <option value="Sing">Hát / Rap</option>
+                            <option value="Dance">Nhảy / Múa</option>
+                            <option value="Instrument">Nhạc cụ</option>
+                            <option value="MC">MC / Diễn xuất</option>
+                        </select>
+                        <textarea placeholder="Một vài thành tích hoặc năng khiếu của bạn..." rows="3" style="width:100%; padding:10px; border-radius:8px; background:rgba(255,255,255,0.1); color:white; border:none; outline:none; margin-bottom:15px;"></textarea>
+                        <button type="submit" class="btn-submit art-btn">Gửi đơn ứng tuyển</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-bottom">
+            &copy; 2026 AMC Art Club - THPT Trần Hưng Đạo.
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('regFormArt').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Đơn của bạn đã được gửi đến ban chủ nhiệm AMC! Hãy chuẩn bị cho buổi casting nhé.');
+        }
+    </script>
+</body>
+</html>

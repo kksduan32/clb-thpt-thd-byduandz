@@ -1,0 +1,437 @@
+:root {
+    --primary: #007bff;
+    --accent: #00d2d3;
+    --text: #2c3e50;
+    --white: #ffffff;
+    --bg-light: #f8faff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+html { scroll-behavior: smooth; }
+
+/* NAVBAR */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 80px; position: fixed; width: 100%; top: 0; z-index: 1000;
+    transition: 0.4s; color: white;
+}
+.navbar.scrolled { background: white; color: var(--primary); box-shadow: 0 2px 20px rgba(0,0,0,0.1); padding: 15px 80px; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 35px; }
+.nav-links a { text-decoration: none; color: inherit; font-weight: 700; font-size: 0.9rem; }
+
+/* HERO */
+.hero {
+    height: 85vh; background: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600') center/cover;
+    display: flex; align-items: center; justify-content: center; position: relative; color: white; text-align: center;
+}
+.overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 43, 85, 0.5); }
+.hero-content { z-index: 1; }
+.hero h1 { font-size: 4rem; font-weight: 800; letter-spacing: -1px; }
+
+.btn-main {
+    padding: 15px 40px; background: var(--white); color: var(--primary);
+    border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 30px;
+    transition: 0.3s;
+}
+.btn-main:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+/* STATS */
+.stats {
+    display: flex; justify-content: space-around; background: white; width: 80%;
+    margin: -60px auto 50px; padding: 40px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    position: relative; z-index: 10;
+}
+.stat-item h3 { font-size: 2.5rem; color: var(--primary); }
+.stat-item p { font-weight: 600; color: #7f8c8d; text-transform: uppercase; font-size: 0.8rem; }
+
+/* CLUBS */
+.container { max-width: 1200px; margin: 100px auto; padding: 0 20px; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-header h2 { font-size: 2.5rem; color: #1a2a6c; }
+
+.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; }
+.card { background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.4s; cursor: pointer; border: 1px solid #f0f0f0; }
+.card:hover { transform: translateY(-12px); box-shadow: 0 20px 40px rgba(0,123,255,0.15); }
+.card-img { height: 230px; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; }
+.card-content { padding: 30px; }
+.tag { padding: 5px 15px; border-radius: 20px; color: white; font-size: 0.7rem; font-weight: 700; margin-bottom: 15px; display: inline-block; }
+.tag.art { background: #ff4757; }
+.tag.sport { background: #2ed573; }
+.tag.science { background: #5352ed; }
+.tag.media { background: #ffa502; }
+
+/* EVENTS */
+.event-section { background: var(--bg-light); padding: 100px 0; }
+.event-list { max-width: 800px; margin: 0 auto; }
+.event-item { background: white; padding: 25px; border-radius: 15px; display: flex; align-items: center; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+.event-date { background: #eef5ff; padding: 15px; border-radius: 12px; min-width: 85px; text-align: center; margin-right: 25px; color: var(--primary); }
+.event-date .day { font-size: 1.8rem; font-weight: 800; display: block; }
+.event-info h3 { font-size: 1.2rem; color: #2f3542; }
+
+.btn-reg { background: var(--primary); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; display: inline-block; transition: 0.3s; }
+.btn-reg:hover { background: #0056b3; transform: scale(1.05); }
+
+/* FOOTER - FIXED LỆCH ICON */
+footer { background: #001d3d; color: white; padding: 80px 0 0; }
+.footer-content { 
+    max-width: 1200px; margin: 0 auto; display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 40px; padding: 0 40px 60px; 
+}
+.footer-col h3 { font-size: 1.2rem; margin-bottom: 30px; color: var(--accent); position: relative; }
+.footer-col h3::after { content: ''; width: 40px; height: 3px; background: var(--accent); position: absolute; left: 0; bottom: -10px; }
+.footer-col p { color: #cbd5e0; margin-bottom: 15px; font-size: 0.95rem; display: flex; align-items: center; }
+.footer-col i { margin-right: 15px; color: var(--accent); font-size: 1.1rem; }
+
+/* Wrapper cho Social Icons để thẳng hàng */
+.social-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Căn giữa icon theo chiều dọc */
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+.social-icon:hover { background: var(--accent); color: #001d3d; transform: translateY(-5px); }
+
+.footer-bottom { background: #00152e; padding: 25px; text-align: center; color: #718096; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.05); }
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .navbar { padding: 20px; }
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2.5rem; }
+    .stats { width: 90%; flex-direction: column; gap: 20px; }
+}
+/* Thêm vào style.css */
+.card-img {
+    background-color: #e3f2fd; /* Màu nền dự phòng nếu ảnh lỗi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Hiệu ứng mờ dần khi ảnh hiện lên */
+.card-img img {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* CSS CHI TIẾT CÂU LẠC BỘ */
+.club-hero {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding-top: 80px;
+}
+
+/* Ảnh nền bóng đá - Link bền vững từ Wikipedia */
+.club-hero.football {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Football_Pallo_2.jpg/1280px-Football_Pallo_2.jpg') center/cover;
+}
+
+.club-tag {
+    background: #2ed573;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.club-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.club-info h2, .club-info h3 { color: #001a33; margin-bottom: 20px; }
+.club-info p { line-height: 1.8; color: #555; margin-bottom: 30px; }
+
+.highlights { display: flex; gap: 20px; margin-bottom: 40px; }
+.h-item {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+.h-item i { font-size: 2rem; color: #ffa502; margin-bottom: 10px; }
+.h-item span { font-weight: 700; font-size: 0.9rem; text-align: center; }
+
+/* Bảng lịch tập */
+.schedule-table { width: 100%; border-collapse: collapse; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.schedule-table th, .schedule-table td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+.schedule-table th { background: #0062ff; color: white; }
+
+/* Form đăng ký */
+.reg-card {
+    background: #001a33;
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+    position: sticky;
+    top: 100px;
+}
+.reg-card h3 { color: #00e5ff; margin-bottom: 10px; }
+.reg-card form input, .reg-card form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    outline: none;
+}
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #00e5ff;
+    color: #001a33;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-submit:hover { background: white; transform: scale(1.02); }
+
+.back-btn { text-decoration: none; color: inherit; font-weight: 700; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .club-grid { grid-template-columns: 1fr; }
+    .highlights { flex-direction: column; }
+}
+/* CSS CHI TIẾT CLB VĂN NGHỆ */
+.art-hero {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Opening_ceremony_of_the_European_European_Youth_Olympic_Festival_2015_%28EYOF%29.jpg/1280px-Opening_ceremony_of_the_European_European_Youth_Olympic_Festival_2015_%28EYOF%29.jpg') center/cover !important;
+}
+
+.art-tag { background: #f368e0 !important; }
+
+.art-table th { background: #f368e0 !important; }
+
+.art-card {
+    background: linear-gradient(135deg, #2c3e50, #000000) !important;
+    border-top: 5px solid #f368e0;
+}
+
+.art-btn {
+    background: #f368e0 !important;
+    color: white !important;
+}
+
+.art-btn:hover {
+    background: white !important;
+    color: #f368e0 !important;
+}
+
+/* Hiệu ứng cho các item thế mạnh */
+.h-item:hover i {
+    transform: scale(1.2) rotate(10deg);
+    transition: 0.3s;
+}
+
+/* Tùy chỉnh form cho văn nghệ */
+.reg-card textarea::placeholder { color: #aaa; }
+/* CSS CHI TIẾT CLB STEM */
+.stem-hero {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Robotics_Competition_-_S%C3%A3o_Paulo.jpg/1280px-Robotics_Competition_-_S%C3%A3o_Paulo.jpg') center/cover !important;
+}
+
+.stem-tag { background: #5352ed !important; }
+
+.stem-table th { background: #5352ed !important; }
+
+.stem-card {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e) !important;
+    border: 1px solid #00e5ff;
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+}
+
+.stem-btn {
+    background: #00e5ff !important;
+    color: #0f0c29 !important;
+}
+
+.stem-btn:hover {
+    background: white !important;
+    box-shadow: 0 0 20px #00e5ff;
+}
+
+.project-list {
+    margin-bottom: 30px;
+}
+
+.project-item {
+    background: #eef2f7;
+    padding: 15px;
+    border-left: 4px solid #5352ed;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Hiệu ứng Glow cho icon khi hover */
+.h-item:hover i {
+    text-shadow: 0 0 10px currentColor;
+    transform: translateY(-5px);
+}
+/* CSS CHI TIẾT CLB TRUYỀN THÔNG */
+.media-hero {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Camera_operator_at_work.jpg/1280px-Camera_operator_at_work.jpg') center/cover !important;
+}
+
+.media-tag { background: #ffa502 !important; }
+
+.media-table th { background: #ffa502 !important; }
+
+.media-card {
+    background: #1a1a1a !important; /* Màu đen máy ảnh chuyên nghiệp */
+    border-right: 5px solid #ffa502;
+}
+
+.media-btn {
+    background: #ffa502 !important;
+    color: white !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.media-btn:hover {
+    background: white !important;
+    color: #ffa502 !important;
+    box-shadow: 0 5px 15px rgba(255, 165, 2, 0.4);
+}
+
+.media-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.service-tag {
+    background: #fff3e0;
+    color: #e65100;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #ffe0b2;
+}
+
+/* Hiệu ứng hover cho ảnh */
+.media-hero .overlay {
+    background: rgba(0, 0, 0, 0.5); /* Đậm hơn một chút để nổi bật chữ */
+}
+/* CSS CHI TIẾT CLB BÓNG CHUYỀN */
+.volleyball-hero {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Volleyball_game_at_the_2016_Summer_Olympics_-_01.jpg/1280px-Volleyball_game_at_the_2016_Summer_Olympics_-_01.jpg') center/cover !important;
+}
+
+.vball-tag { background: #0984e3 !important; }
+
+.vball-table th { background: #0984e3 !important; }
+
+.vball-card {
+    background: linear-gradient(135deg, #003973, #159957) !important; /* Xanh đậm sang xanh lá nhẹ của mặt sân */
+    border-left: 5px solid #ffffff;
+}
+
+.vball-btn {
+    background: #ffffff !important;
+    color: #003973 !important;
+}
+
+.vball-btn:hover {
+    background: #0984e3 !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Tùy chỉnh input cho trang Bóng chuyền */
+.vball-card input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    outline: none;
+}
+/* CSS CHI TIẾT CLB ĐIỀN KINH */
+.track-hero {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Runners_at_the_2010_Commonwealth_Games.jpg/1280px-Runners_at_the_2010_Commonwealth_Games.jpg') center/cover !important;
+}
+
+.track-tag { background: #ff4757 !important; }
+
+.track-table th { background: #ff4757 !important; }
+
+.track-card {
+    background: linear-gradient(135deg, #4b0101, #ff4757) !important;
+    border-top: 5px solid #ffffff;
+}
+
+.track-btn {
+    background: #ffffff !important;
+    color: #4b0101 !important;
+}
+
+.track-btn:hover {
+    background: #ff4757 !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+}
+
+.track-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.type-item {
+    background: #ffeeee;
+    color: #ff4757;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
